@@ -6,5 +6,6 @@ class Horoscope(
     val date: Int,
     val image: Int
 
+
 ) {
 }
