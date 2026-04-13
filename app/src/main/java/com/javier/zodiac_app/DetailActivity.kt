@@ -2,12 +2,19 @@ package com.javier.zodiac_app
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class DetailActivity : AppCompatActivity() {
+
+    lateinit var nameTextView: TextView
+    lateinit var imageView: ImageView
+    lateinit var descTextView: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -22,5 +29,14 @@ class DetailActivity : AppCompatActivity() {
 
         val horoscope = Horoscope.getById(id)!!
         Log.i("ZODIAC", "${getString(horoscope.name)} -> ${getString(horoscope.dates)}")
+
+        // Conectamos con XML
+        nameTextView = findViewById(R.id.nameTextView)
+        imageView= findViewById(R.id.imageView)
+        descTextView= findViewById(R.id.descTextView)
+
+        nameTextView.text = getString(horoscope.name)
+        imageView.setImageResource(horoscope.image)
+        descTextView.text = getString(horoscope.desc)
     }
 }
