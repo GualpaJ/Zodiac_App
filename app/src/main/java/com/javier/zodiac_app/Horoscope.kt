@@ -26,10 +26,8 @@ class Horoscope(
             Horoscope("pisces", R.string.horoscope_name_pisces, R.string.horoscope_date_pisces, R.drawable.pisces)
         )
 
-        fun getById(id: String): Horoscope? {
-            horoscopeList.find {
-                it.id == id
-            }
+        fun getById(id: String) : Horoscope? {
+            return horoscopeList.find { it.id == id }
         }
     }
 

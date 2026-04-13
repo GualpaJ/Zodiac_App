@@ -21,6 +21,6 @@ class DetailActivity : AppCompatActivity() {
         val id = intent.getStringExtra("HOROSCOPE_ID")!!
 
         val horoscope = Horoscope.getById(id)!!
-        Log.i("ZODIAC","${getString()}")
+        Log.i("ZODIAC", "${getString(horoscope.name)} -> ${getString(horoscope.dates)}")
     }
 }
