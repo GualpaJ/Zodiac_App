@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.javier.zodiac_app.data.Horoscope
 import com.javier.zodiac_app.adapters.HoroscopeAdapter
 import com.javier.zodiac_app.R
+import com.javier.zodiac_app.utils.search
 
 class MainActivity : AppCompatActivity() {
 
@@ -56,9 +57,15 @@ class MainActivity : AppCompatActivity() {
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextChange(newText: String): Boolean {
+                // Esto no tiene en cuenta los acentos de las palabras para ello implementamos .search()
+//                horoscopeList = Horoscope.Companion.horoscopeList.filter{
+//                    getString(it.name).contains(newText, true)
+//                            ||getString(it.dates).contains(newText,true)
+//                }
+
                 horoscopeList = Horoscope.Companion.horoscopeList.filter{
-                    getString(it.name).contains(newText, true)
-                            ||getString(it.dates).contains(newText,true)
+                    getString(it.name).search(newText)
+                            ||getString(it.dates).search(newText)
                 }
                 adapter.updateData(horoscopeList)
                 return true
