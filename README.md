@@ -1,9 +1,9 @@
 # 🌌 Zodiac App – Android Kotlin
 
 **Descripción:**  
-Aplicación nativa de Android desarrollada en Kotlin que muestra información sobre los signos del zodiaco. La app presenta una lista de horóscopos mediante un **RecyclerView** y permite navegar a una pantalla de detalle con nombre, imagen y descripción.
+Aplicación nativa de Android desarrollada en Kotlin que muestra información sobre los signos del zodiaco mediante un **RecyclerView**, permitiendo acceder a una pantalla de detalle con información ampliada.
 
-En su versión **v2.0**, se han añadido mejoras de interacción como búsqueda, sistema de favoritos y opciones de compartir.
+El proyecto ha evolucionado en tres versiones (v1.0–v3.0), incorporando búsqueda, sistema de favoritos persistente y mejoras en la interacción del usuario como acciones de compartir y gestión avanzada de favoritos.
 
 ---
 
@@ -26,6 +26,13 @@ En su versión **v2.0**, se han añadido mejoras de interacción como búsqueda,
 - ⭐ Indicador visual de favoritos en la lista  
 - 🔗 Opción de compartir contenido (Intent ACTION_SEND)  
 - 📱 Action Bar con acciones (favorito + compartir)  
+
+### 🔹 v3.0
+- ❤️ Sistema de favoritos múltiples (StringSet)
+- 💾 Persistencia de lista de favoritos
+- 🔄 Mejora de gestión de estado en DetailActivity
+- 🧠 Uso de SharedPreferences optimizado
+- ⭐ Refactor de lógica de gestión de favoritos usando StringSet
 
 ---
 
@@ -55,6 +62,18 @@ En su versión **v2.0**, se han añadido mejoras de interacción como búsqueda,
   <img src="list2.png" width="250">
   <img src="detail2.png" width="250">
 </p>
+
+---
+
+## 📌 Estado del proyecto
+
+El proyecto evoluciona en tres versiones principales:
+
+- v1.0 → Lista de signos con RecyclerView y detalle
+- v2.0 → Búsqueda, favoritos simples y compartir
+- v3.0 → Favoritos múltiples y persistencia mejorada
+
+🚧 En desarrollo → Nueva pantalla de lista de favoritos
 
 ---
 
