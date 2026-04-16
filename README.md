@@ -1,21 +1,31 @@
 # 🌌 Zodiac App – Android Kotlin
 
 **Descripción:**  
-Aplicación nativa de Android desarrollada en Kotlin que muestra información sobre los signos del zodiaco. La app presenta una lista de horóscopos mediante un **RecyclerView** y permite navegar a una pantalla de detalle donde se muestra el nombre, imagen y descripción de cada signo. Es un proyecto práctico para aprender navegación entre Activities, manejo de datos con modelos y uso de recursos en Android.
+Aplicación nativa de Android desarrollada en Kotlin que muestra información sobre los signos del zodiaco. La app presenta una lista de horóscopos mediante un **RecyclerView** y permite navegar a una pantalla de detalle con nombre, imagen y descripción.
+
+En su versión **v2.0**, se han añadido mejoras de interacción como búsqueda, sistema de favoritos y opciones de compartir.
 
 ---
 
 ## 📌 Funcionalidades
 
-- Lista de signos del zodiaco usando **RecyclerView**.  
-- Navegación a pantalla de detalle al hacer click en un signo.  
-- Envío de datos entre Activities mediante `Intent`.  
+### 🔹 v1.0
+- Lista de signos del zodiaco usando **RecyclerView**  
+- Navegación a pantalla de detalle al hacer click  
+- Envío de datos entre Activities mediante `Intent`  
 - Pantalla de detalle con:
-  - Nombre del signo  
-  - Imagen representativa  
-  - Descripción del horóscopo  
-- Uso de recursos de Android (`strings.xml`, `drawables`).  
-- Modelo de datos centralizado con clase `Horoscope`.  
+  - Nombre  
+  - Imagen  
+  - Descripción  
+- Uso de recursos (`strings.xml`, `drawables`)  
+- Modelo de datos `Horoscope`  
+
+### 🔹 v2.0
+- 🔍 Búsqueda de signos con **SearchView**  
+- ❤️ Sistema de favoritos con persistencia (**SharedPreferences**)  
+- ⭐ Indicador visual de favoritos en la lista  
+- 🔗 Opción de compartir contenido (Intent ACTION_SEND)  
+- 📱 Action Bar con acciones (favorito + compartir)  
 
 ---
 
@@ -24,38 +34,39 @@ Aplicación nativa de Android desarrollada en Kotlin que muestra información so
 - Kotlin  
 - Android Studio  
 - RecyclerView  
-- Intent (Navigation entre Activities)  
+- Intents (Activity Navigation)  
+- SharedPreferences  
+- SearchView  
 - Material Design Components  
-- Recursos Android: `strings.xml`, `drawables`  
-- Layouts: `ConstraintLayout`, `LinearLayout`
+- ConstraintLayout  
 
 ---
 
 ## 📷 Capturas de pantalla
 
+### 🟢 v1.0
 <p align="center">
   <img src="list.png" width="250">
   <img src="detail.png" width="250">
 </p>
 
+### 🔵 v2.0
 <p align="center">
-  <sub>Pantalla principal con el RecyclerView mostrando los signos del zodiaco</sub>
-</p>
-
-<p align="center">
-  <sub>Pantalla de detalle con la información del horóscopo seleccionado</sub>
+  <img src="list2.png" width="250">
+  <img src="detail2.png" width="250">
 </p>
 
 ---
 
 ## 📝 Lo que aprendí
 
-- Uso de RecyclerView y Adapters para listas dinámicas.  
-- Navegación entre Activities usando Intents.  
-- Paso de datos entre pantallas (`putExtra`, `getStringExtra`).  
-- Creación de modelos de datos en Kotlin (`Horoscope`).  
-- Uso correcto de recursos Android (`R.string`, `R.drawable`).  
-- Separación de lógica y UI en arquitectura básica de Android.  
+- Uso de RecyclerView y Adapters  
+- Navegación entre Activities con Intents  
+- Paso de datos entre pantallas  
+- Gestión de estado con **SharedPreferences**  
+- Implementación de **SearchView** para filtrado  
+- Manejo del **Action Bar y menús**  
+- Mejora de UX con favoritos y compartir  
 
 ---
 
